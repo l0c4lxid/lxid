@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Testing Web</title> 
+</head>
+<body>
+    <div class="container">
+        <span class="text first-text">LxID00</span>
+        <span class="text sec-text">Hallo!!</span>
+    </div>
+
+    <script>
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Hai!!";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Hello!!";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Holla!!";
+            }, 8000); //1s = 1000 milliseconds
+            setTimeout(() => {
+                text.textContent = "Borjour!!";
+            }, 12000); //1s = 1000 milliseconds
+        }
+
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
+    
+</body>
+</html>
